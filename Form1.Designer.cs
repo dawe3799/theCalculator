@@ -49,7 +49,7 @@ namespace theCalculator
             this.btnPeriod = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.txtBoxAnswer = new System.Windows.Forms.TextBox();
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn7
@@ -72,6 +72,7 @@ namespace theCalculator
             this.btnClearnEntry.TabIndex = 1;
             this.btnClearnEntry.Text = "CE";
             this.btnClearnEntry.UseVisualStyleBackColor = true;
+            this.btnClearnEntry.Click += new System.EventHandler(this.btnClearnEntry_Click);
             // 
             // btnDivide
             // 
@@ -148,6 +149,7 @@ namespace theCalculator
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btn4
             // 
@@ -202,6 +204,7 @@ namespace theCalculator
             this.btnEquals.TabIndex = 11;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
             // btn1
             // 
@@ -257,22 +260,22 @@ namespace theCalculator
             this.txtBoxAnswer.Text = "0";
             this.txtBoxAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lbl1
+            // lblDisplay
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(35, 26);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(66, 24);
-            this.lbl1.TabIndex = 21;
-            this.lbl1.Text = "label1";
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplay.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblDisplay.Location = new System.Drawing.Point(35, 26);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(0, 24);
+            this.lblDisplay.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 320);
-            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.txtBoxAnswer);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnPeriod);
@@ -324,7 +327,7 @@ namespace theCalculator
         private System.Windows.Forms.Button btnPeriod;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.TextBox txtBoxAnswer;
-        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lblDisplay;
     }
 }
 
